@@ -110,7 +110,8 @@ const HeroScrollImage = () => {
                   playsInline
                   loop
                   muted
-                  src="https://player.vimeo.com/progressive_redirect/playback/879938356/rendition/1080p/file.mp4?loc=external&amp;signature=6d80f8362f86b78e227f66f77fc8163a6037a1ebc54c2a9ce9732224b101d6cc"></video>
+                  src="https://player.vimeo.com/progressive_redirect/playback/879436609/rendition/720p/file.mp4?loc=external&signature=cd6297404ad1dc6cab9c364310d30228648012c1d8935fc3834ab50e85886bc6"></video>
+                  
               </div>
             </section>
             <section className={cx("panel")}>
@@ -122,7 +123,7 @@ const HeroScrollImage = () => {
                   playsInline
                   loop
                   muted
-                  src="https://player.vimeo.com/progressive_redirect/playback/879436609/rendition/720p/file.mp4?loc=external&signature=cd6297404ad1dc6cab9c364310d30228648012c1d8935fc3834ab50e85886bc6"></video>
+                  src="https://player.vimeo.com/progressive_redirect/playback/879938356/rendition/1080p/file.mp4?loc=external&amp;signature=6d80f8362f86b78e227f66f77fc8163a6037a1ebc54c2a9ce9732224b101d6cc"></video>
               </div>
             </section>
             <section className={cx("panel")}>

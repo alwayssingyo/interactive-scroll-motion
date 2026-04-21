@@ -1,4 +1,4 @@
-import { Suspense, useEffect, useMemo, useRef, VFC } from "react";
+import { Suspense, useCallback, useEffect, useMemo, useRef, VFC } from "react";
 import { ShaderPass } from "three-stdlib";
 import { useTexture } from "@react-three/drei";
 import { extend, useFrame } from "@react-three/fiber";
@@ -55,26 +55,32 @@ const Ripple: VFC<RippleType> = (props) => {
     };
   }, []);
 
+  const disposeEffect = useCallback(() => {
+    if (scroll) {
+      effectScroll.dispose();
+    } else {
+      effect.dispose();
+    }
+  }, [effect, effectScroll, scroll]);
+
+  const resetEffect = useCallback(() => {
+    if (scroll) {
+      effectScroll.dispose();
+      effectScroll.leavePos();
+    } else {
+      effect.dispose();
+    }
+  }, [effect, effectScroll, scroll]);
+
   useEffect(() => {
-    return () => {
-      if (scroll) {
-        effectScroll.dispose();
-      } else {
-        effect.dispose();
-      }
-    };
-  }, [effect]);
+    return disposeEffect;
+  }, [disposeEffect]);
 
   useEffect(() => {
     if (!enabled) {
-      if (scroll) {
-        effectScroll.dispose();
-        effectScroll.leavePos();
-      } else {
-        effect.dispose();
-      }
+      resetEffect();
     }
-  }, [enabled]);
+  }, [enabled, resetEffect]);
 
   useFrame(({ gl }) => {
     if (scroll) {

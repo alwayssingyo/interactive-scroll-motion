@@ -1,6 +1,5 @@
 import * as THREE from "three";
 import { Plane, useTexture } from "@react-three/drei";
-import { publicPath } from "../../utils/file";
 
 export interface PlaneProps {
   imageUrl: string;

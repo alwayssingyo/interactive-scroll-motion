@@ -1,4 +1,4 @@
-# showcase-teama
+# interactive-scroll-motion
 
 브랜드 비주얼을 스크롤의 흐름에 맞춰 전개하는 인터랙티브 작업물입니다.
 타이포그래피, 이미지, 비디오, 캔버스 이펙트가 섹션마다 다른 리듬으로 반응하도록 설계했고, GSAP과 React Three Fiber를 활용해 화면 전환과 WebGL 기반 왜곡 효과를 구현했습니다.
